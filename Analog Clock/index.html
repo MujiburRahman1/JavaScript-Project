@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaolog Clock</title>
+    <style>
+        .clock {
+            width: 200px;
+            height: 200px;
+            border: 8px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            background: black;
+        }
+
+        .hour {
+            height: 50px;
+            width: 6px;
+
+        }
+
+        .minutes {
+            height: 70px;
+            width: 4px;
+        }
+
+        .seconds {
+            height: 90px;
+            width: 2px;
+        }
+        .number{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            font-weight: bold;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+
+        <div class="number" style="top: 10px; left:100px">12</div>
+        <div class="number" style="top: 35px; left:145px">1</div>
+        <div class="number" style="top: 70px; left:172px">2</div>
+        <div class="number" style="top: 110px; left:179px">3</div>
+        <div class="number" style="top: 147px; left:160px">4</div>
+        <div class="number" style="top: 175px; left:135px">5</div>
+        <div class="number" style="top: 180px; left:100px">6</div>
+        <div class="number" style="top: 174px; left:65px">7</div>
+        <div class="number" style="top: 148px; left: 39px">8</div>
+        <div class="number" style="top: 111px; left:22px">9</div>
+        <div class="number" style="top: 72px; left:25px">10</div>
+        <div class="number" style="top: 35px; left:50px">11</div>
+
+
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minutes" id="minutes"></div>
+        <div class="hand seconds" id="seconds"></div>
+        <div class="dot"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
